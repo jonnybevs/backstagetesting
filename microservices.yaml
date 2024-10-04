@@ -1,0 +1,239 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: internal-gateway
+  title: Internal Gateway
+spec:
+  type: gateway
+  lifecycle: production
+  owner: micr
+  consumesApis:
+    - sqh-services-addresssearch-http
+    - sqh-services-clientonboarding-http
+    - sqh-services-applicationconfiguration-http
+    - sqh-services-oauth-http
+    - sqh-aggregator-bookings-http
+    - sqh-services-ccs-questionnairereporting-http
+    - sqh-services-ccs-questionnaire-http
+    - sqh-services-bulkuser-http
+    - sqh-services-videocontent-http
+  providesApis:
+    - internal-gateway-http
+---
+apiVersion: backstage.io/v1alpha1
+kind: API
+metadata:
+  name: internal-gateway-http
+  title: "[Gateway] Internal Gateway API"
+  description: REST API exposed by the gateway 'Internal Gateway'
+  tags:
+    - gateway-api
+    - aggregated
+spec:
+  type: openapi
+  lifecycle: production
+  owner: micr
+  definition: unknown
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: testing-gateway
+  title: Testing Gateway
+spec:
+  type: gateway
+  lifecycle: production
+  owner: micr
+  consumesApis:
+    - sqh-services-applicationconfiguration-http
+    - sqh-services-userwizard-http
+  providesApis:
+    - testing-gateway-http
+---
+apiVersion: backstage.io/v1alpha1
+kind: API
+metadata:
+  name: testing-gateway-http
+  title: "[Gateway] Testing Gateway API"
+  description: REST API exposed by the gateway 'Testing Gateway'
+  tags:
+    - gateway-api
+    - aggregated
+spec:
+  type: openapi
+  lifecycle: production
+  owner: micr
+  definition: unknown
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: application-gateway
+  title: Application Gateway
+spec:
+  type: gateway
+  lifecycle: production
+  owner: micr
+  consumesApis:
+    - sqh-services-applicationinformation-http
+    - sqh-services-applicationuser-http
+    - sqh-aggregator-appointments-http
+    - sqh-services-oauth-http
+    - sqh-aggregator-bookings-http
+    - sqh-aggregator-clinicians-http
+    - sqh-services-ccs-cms-http
+    - sqh-aggregator-familymembers-http
+    - sqh-aggregator-externaluser-http
+    - sqh-services-legaldocumentation-http
+    - sqh-aggregator-medicalprofile-http
+    - sqh-services-ccs-questionnaire-http
+    - sqh-aggregator-platformservices-http
+    - sqh-services-tokengeneration-http
+    - sqh-services-userwizard-http
+    - sqh-services-videocontent-http
+  providesApis:
+    - application-gateway-http
+---
+apiVersion: backstage.io/v1alpha1
+kind: API
+metadata:
+  name: application-gateway-http
+  title: "[Gateway] Application Gateway API"
+  description: REST API exposed by the gateway 'Application Gateway'
+  tags:
+    - gateway-api
+    - aggregated
+spec:
+  type: openapi
+  lifecycle: production
+  owner: micr
+  definition: unknown
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: external-gateway
+  title: External Gateway
+spec:
+  type: gateway
+  lifecycle: production
+  owner: micr
+  consumesApis:
+    - sqh-aggregator-appointments-http
+    - sqh-services-oauth-http
+    - sqh-aggregator-bookings-http
+    - sqh-aggregator-clinicians-http
+    - sqh-aggregator-externaluser-http
+    - sqh-aggregator-medicalprofile-http
+    - sqh-aggregator-referencedata-http
+    - sqh-services-referrer-customer-http
+    - sqh-services-company-http
+    - sqh-services-referrer-system-users-http
+    - sqh-aggregator-platformservices-http
+    - sqh-services-bulkuser-http
+  providesApis:
+    - external-gateway-http
+---
+apiVersion: backstage.io/v1alpha1
+kind: API
+metadata:
+  name: external-gateway-http
+  title: "[Gateway] External Gateway API"
+  description: REST API exposed by the gateway 'External Gateway'
+  tags:
+    - gateway-api
+    - aggregated
+spec:
+  type: openapi
+  lifecycle: production
+  owner: micr
+  definition: unknown
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: integration-gateway
+  title: Integration Gateway
+spec:
+  type: gateway
+  lifecycle: production
+  owner: micr
+  consumesApis:
+    - sqh-services-oauth-http
+    - sqh-aggregator-externaluser-http
+  providesApis:
+    - integration-gateway-http
+---
+apiVersion: backstage.io/v1alpha1
+kind: API
+metadata:
+  name: integration-gateway-http
+  title: "[Gateway] Integration Gateway API"
+  description: REST API exposed by the gateway 'Integration Gateway'
+  tags:
+    - gateway-api
+    - aggregated
+spec:
+  type: openapi
+  lifecycle: production
+  owner: micr
+  definition: unknown
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: ccs-gateway
+  title: CCS Gateway
+spec:
+  type: gateway
+  lifecycle: production
+  owner: micr
+  consumesApis:
+    - sqh-services-ccs-cms-http
+    - sqh-services-ccs-questionnaire-http
+  providesApis:
+    - ccs-gateway-http
+---
+apiVersion: backstage.io/v1alpha1
+kind: API
+metadata:
+  name: ccs-gateway-http
+  title: "[Gateway] CCS Gateway API"
+  description: REST API exposed by the gateway 'CCS Gateway'
+  tags:
+    - gateway-api
+    - aggregated
+spec:
+  type: openapi
+  lifecycle: production
+  owner: micr
+  definition: unknown
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: admin-gateway
+  title: Admin Gateway
+spec:
+  type: gateway
+  lifecycle: production
+  owner: micr
+  consumesApis:
+    - sqh-services-company-http
+  providesApis:
+    - admin-gateway-http
+---
+apiVersion: backstage.io/v1alpha1
+kind: API
+metadata:
+  name: admin-gateway-http
+  title: "[Gateway] Admin Gateway API"
+  description: REST API exposed by the gateway 'Admin Gateway'
+  tags:
+    - gateway-api
+    - aggregated
+spec:
+  type: openapi
+  lifecycle: production
+  owner: micr
+  definition: unknown
