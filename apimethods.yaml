@@ -11,8 +11,8 @@ spec:
 apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
-  name: "/{proxy+}"
-  title: "/{proxy+}"
+  name: ah-oauth-uat-api:/{proxy+}
+  title: /{proxy+}
   description: method
   tags:
     - POST method
@@ -21,17 +21,18 @@ spec:
   lifecycle: production
   owner: micr
   definition: unknown
+  system: ah-oauth-uat-api
 ---
 apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
-  name: "/"
-  title: "/"
+  name: ah-oauth-uat-api:/
+  title: /
 spec:
   type: api 
   lifecycle: production
   owner: micr
-  consumesApis:
+  system: ah-oauth-uat-api
 ---
 apiVersion: backstage.io/v1alpha1
 kind: Component
@@ -45,7 +46,7 @@ spec:
   type: library
   lifecycle: production
   owner: micr
-  definition: unknown
+  system: ah-oauth-uat-api:/{proxy+}
 ---
 apiVersion: backstage.io/v1alpha1
 kind: Component
@@ -56,4 +57,5 @@ spec:
   type: library
   lifecycle: production
   owner: micr 
+  system: ah-oauth-uat-api:/
 ---
