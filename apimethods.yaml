@@ -7,6 +7,7 @@ spec:
   type: API
   lifecycle: production
   definition: unknown
+  owner: micr
 ---
 apiVersion: backstage.io/v1alpha1
 kind: Component
@@ -19,4 +20,5 @@ spec:
   lifecycle: production
   system: ah-oauth-uat-api
   definition: unknown
+  owner: micr
 ---
