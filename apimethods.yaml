@@ -12,7 +12,7 @@ apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
   name: ah-oauth-uat-api-proxy
-  title: /{proxy+}
+  title: proxy
   description: method
   tags:
     - POST method
@@ -26,8 +26,8 @@ spec:
 apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
-  name: ah-oauth-uat-api:/
-  title: /
+  name: ah-oauth-uat-api-slash
+  title: slash
 spec:
   type: api 
   lifecycle: production
