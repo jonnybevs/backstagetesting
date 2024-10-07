@@ -6,32 +6,6 @@ metadata:
 spec:
   type: API
   lifecycle: production
-  owner: micr
-  definition: unknown
----
-apiVersion: backstage.io/v1alpha1
-kind: Component
-metadata:
-  name: ah-oauth-uat-api-proxy
-  title: proxy
-  description: method
-spec:
-  type: api 
-  lifecycle: production
-  owner: micr
-  definition: unknown
-  system: ah-oauth-uat-api
----
-apiVersion: backstage.io/v1alpha1
-kind: Component
-metadata:
-  name: ah-oauth-uat-api-slash
-  title: slash
-spec:
-  type: api 
-  lifecycle: production
-  owner: micr
-  system: ah-oauth-uat-api
   definition: unknown
 ---
 apiVersion: backstage.io/v1alpha1
@@ -43,7 +17,6 @@ metadata:
 spec:
   type: library
   lifecycle: production
-  owner: micr
-  system: ah-oauth-uat-api-proxy
+  system: ah-oauth-uat-api
   definition: unknown
 ---
