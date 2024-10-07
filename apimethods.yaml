@@ -37,9 +37,9 @@ spec:
 apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
-  name: arn:aws:apigateway:eu-west-1:lambda:path/2015-03-31/functions/arn:aws:lambda:eu-west-1:083133289548:function:ah-oauth-api-handler/invocations
-  title: "function:ah-oauth-api-handler"
-  description: Lambda Mapping
+  name: function:ah-oauth-api-handler
+  title: function:ah-oauth-api-handler
+  description: arn:aws:apigateway:eu-west-1:lambda:path/2015-03-31/functions/arn:aws:lambda:eu-west-1:083133289548:function:ah-oauth-api-handler/invocations
   tags:
     - Lambda
 spec:
@@ -51,8 +51,11 @@ spec:
 apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
-  name: arn:aws:apigateway:eu-west-1:lambda:path/2015-03-31/functions/arn:aws:lambda:eu-west-1:083133289548:function:ah-oauth-api-handler/invocations
+  name: function:ah-oauth-api-handler
   title: function:ah-oauth-api-handler
+  description : arn:aws:apigateway:eu-west-1:lambda:path/2015-03-31/functions/arn:aws:lambda:eu-west-1:083133289548:function:ah-oauth-api-handler/invocations
+   tags:
+    - Lambda
 spec:
   type: library
   lifecycle: production
