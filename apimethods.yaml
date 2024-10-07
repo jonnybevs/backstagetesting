@@ -11,7 +11,7 @@ spec:
 apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
-  name: ah-oauth-uat-api:/{proxy+}
+  name: ah-oauth-uat-api-proxy
   title: /{proxy+}
   description: method
   tags:
@@ -44,5 +44,5 @@ spec:
   type: library
   lifecycle: production
   owner: micr
-  system: ah-oauth-uat-api:/{proxy+}
+  system: ah-oauth-uat-api-proxy
 ---
