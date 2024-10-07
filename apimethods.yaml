@@ -14,8 +14,6 @@ metadata:
   name: ah-oauth-uat-api-proxy
   title: proxy
   description: method
-  tags:
-    - POST method
 spec:
   type: api 
   lifecycle: production
