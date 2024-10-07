@@ -40,8 +40,6 @@ metadata:
   name: ah-oauth-api-handler
   title: ah-oauth-api-handler
   description: arn:aws:apigateway:eu-west-1:lambda:path/2015-03-31/functions/arn:aws:lambda:eu-west-1:083133289548:function:ah-oauth-api-handler/invocations
-  tags:
-    - Lambda
 spec:
   type: library
   lifecycle: production
