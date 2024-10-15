@@ -8,7 +8,8 @@ spec:
   type: lambda
   lifecycle: production
   owner: group:SQH
-  children: unum-update-policy-date-in-portalDB-bs
+  children: 
+    - unum-update-policy-date-in-portalDB-bs
 ---
 apiVersion: backstage.io/v1alpha1
 kind: Component
