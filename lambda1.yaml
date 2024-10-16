@@ -24272,19 +24272,4 @@ spec:
   lifecycle: production
   definition: unknown
   system: ""
----
-apiVersion: backstage.io/v1alpha1
-kind: API
-metadata:
-  name: VirusScannerMock
-  title: Gateway API - VirusScannerMock
-  description: Gateway API - VirusScannerMock
-relations:
-  - type: dependsOn
-    targetRef: ""
-spec:
-  type: APIGateway
-  owner: "group: SQH"
-  lifecycle: production
-  definition: unknown
-  system: ""
+
