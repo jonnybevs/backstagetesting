@@ -129,7 +129,6 @@ spec:
     - resource:docpdpv-trigger-periodic-email-workflow
     - resource:msqpdpv-trigger-periodic-email-workflow
     - resource:s3pdpv-trigger-periodic-email-workflow
-  providesApis: []
   system: AWS
 ---
 apiVersion: backstage.io/v1alpha1
@@ -222,7 +221,6 @@ spec:
     - resource:docag-update-family-member-status
     - resource:msqag-update-family-member-status
     - resource:s3ag-update-family-member-status
-  providesApis: []
   system: EB
 ---
 apiVersion: backstage.io/v1alpha1
@@ -1239,7 +1237,6 @@ spec:
   owner: group:SQH
   consumesApis:
     - unknown-sqs-queue
-    providesApis: []
   system: sqh-eb-step-prepare-export-employee-data-and-upload-csv-on-s3
 ---
 apiVersion: backstage.io/v1alpha1
