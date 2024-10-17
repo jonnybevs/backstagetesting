@@ -1239,13 +1239,7 @@ spec:
   owner: group:SQH
   consumesApis:
     - unknown-sqs-queue
-  dependsOn:
-    - resource:cogsqh-eb-step-prepare-export-employee-data-and-upload-csv-on-s3
-    - resource:ddbsqh-eb-step-prepare-export-employee-data-and-upload-csv-on-s3
-    - resource:docsqh-eb-step-prepare-export-employee-data-and-upload-csv-on-s3
-    - resource:msqsqh-eb-step-prepare-export-employee-data-and-upload-csv-on-s3
-    - resource:s3sqh-eb-step-prepare-export-employee-data-and-upload-csv-on-s3
-  providesApis: []
+    providesApis: []
   system: sqh-eb-step-prepare-export-employee-data-and-upload-csv-on-s3
 ---
 apiVersion: backstage.io/v1alpha1
@@ -1300,17 +1294,6 @@ metadata:
     - mysql
 spec:
   type: database
-  owner: micr-unknown
-  system: sqh-eb-step-prepare-export-employee-data-and-upload-csv-on-s3
----
-apiVersion: backstage.io/v1alpha1
-kind: Resource
-metadata:
-  name: cogsqh-eb-step-prepare-export-employee-data-and-upload-csv-on-s3
-  title: "Cognito Identity Pool: "
-  description: Cognito Identity Pool ...
-spec:
-  type: cognito
   owner: micr-unknown
   system: sqh-eb-step-prepare-export-employee-data-and-upload-csv-on-s3
 ---
