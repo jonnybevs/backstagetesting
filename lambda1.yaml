@@ -10533,6 +10533,8 @@ spec:
   type: lambda
   lifecycle: production
   owner: group:SQH
+  providesApis:
+    - Aviva-Group-Mobile-Api-Multiple-Referrer
   consumesApis:
     - unknown-sqs-queue
   dependsOn:
