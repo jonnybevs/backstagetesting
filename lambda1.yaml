@@ -22761,6 +22761,8 @@ spec:
   lifecycle: production
   definition: unknown
   system: Aviva-Group-Mobile-Api-Multiple-Referrer
+  consumesApis:
+    - ag-update-user-details
 ---
 apiVersion: backstage.io/v1alpha1
 kind: API
